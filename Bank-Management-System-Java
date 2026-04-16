@@ -13,15 +13,15 @@ class BankAccount {
 
     void deposit(double amount) {
         balance += amount;
-        System.out.println("✅ Amount Deposited Successfully!");
+        System.out.println(" Amount Deposited Successfully!");
     }
 
     void withdraw(double amount) {
         if (amount > balance) {
-            System.out.println("❌ Insufficient Balance!");
+            System.out.println(" Insufficient Balance!");
         } else {
             balance -= amount;
-            System.out.println("✅ Withdrawal Successful!");
+            System.out.println(" Withdrawal Successful!");
         }
     }
 
@@ -69,10 +69,10 @@ public class BankManagementSystem {
                     viewDetails();
                     break;
                 case 6:
-                    System.out.println("👋 Thank you for using Bank System!");
+                    System.out.println(" Thank you for using Bank System!");
                     System.exit(0);
                 default:
-                    System.out.println("❌ Invalid Choice!");
+                    System.out.println(" Invalid Choice!");
             }
         }
     }
@@ -89,7 +89,7 @@ public class BankManagementSystem {
         double balance = sc.nextDouble();
 
         accounts.add(new BankAccount(name, accNo, balance));
-        System.out.println("✅ Account Created Successfully!");
+        System.out.println(" Account Created Successfully!");
     }
 
     static BankAccount findAccount(int accNo) {
@@ -112,7 +112,7 @@ public class BankManagementSystem {
             double amt = sc.nextDouble();
             acc.deposit(amt);
         } else {
-            System.out.println("❌ Account Not Found!");
+            System.out.println(" Account Not Found!");
         }
     }
 
@@ -127,7 +127,7 @@ public class BankManagementSystem {
             double amt = sc.nextDouble();
             acc.withdraw(amt);
         } else {
-            System.out.println("❌ Account Not Found!");
+            System.out.println(" Account Not Found!");
         }
     }
 
@@ -138,9 +138,9 @@ public class BankManagementSystem {
         BankAccount acc = findAccount(accNo);
 
         if (acc != null) {
-            System.out.println("💰 Balance: ₹" + acc.balance);
+            System.out.println(" Balance: ₹" + acc.balance);
         } else {
-            System.out.println("❌ Account Not Found!");
+            System.out.println("Account Not Found!");
         }
     }
 
@@ -153,7 +153,7 @@ public class BankManagementSystem {
         if (acc != null) {
             acc.display();
         } else {
-            System.out.println("❌ Account Not Found!");
+            System.out.println(" Account Not Found!");
         }
     }
 }
